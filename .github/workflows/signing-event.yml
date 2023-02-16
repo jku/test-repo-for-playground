@@ -22,4 +22,4 @@ jobs:
         with:
           fetch-depth: 0
       - name: Signing event
-        uses: jku/repository-playground/playground/actions/signing-event@eaab68c53abe61d387c7d564a7673995957a65bb
+        uses: jku/repository-playground/playground/actions/signing-event@git-repo-impl
