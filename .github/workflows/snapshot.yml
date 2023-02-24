@@ -1,0 +1,19 @@
+
+name: TUF repository snapshot
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: 'write' # for OIDC needed for GCP authentication
+      contents: 'write' # for commiting the snapshot/timestamp changes
+
+    steps:
+      - name: Snapshot
+        uses: jku/repository-playground/playground/actions/snapshot
