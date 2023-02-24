@@ -39,7 +39,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: snapshot
-    if: needs.snapshot.outputs.generated == "true"
+    if: needs.snapshot.outputs.generated == 'true'
     steps:
       - name: Deploy Playground repository to GitHub Pages
         id: deployment
