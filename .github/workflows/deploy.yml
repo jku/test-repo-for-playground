@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Compile Playground repository
-        uses: jku/repository-playground/playground/actions/compile@git-repo-deploy
+        uses: jku/repository-playground/playground/actions/compile@main
         with:
           path: compiled-metadata/
       - name: Upload repository for GitHub Pages
