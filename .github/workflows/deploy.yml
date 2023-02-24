@@ -1,4 +1,4 @@
-name: Deploy Playground repository metadata
+name: Deploy Playground repository
 
 on:
   push:
