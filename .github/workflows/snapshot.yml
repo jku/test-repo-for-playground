@@ -11,9 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      id-token: 'write' # for OIDC needed for GCP authentication
+      id-token: 'write' # for OIDC needed for Google Cloud authentication
       contents: 'write' # for commiting the snapshot/timestamp changes
 
     steps:
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@ef5d53e30bbcd8d0836f4288f5e50ff3e086997d
+        with:
+          token_format: access_token
+          workload_identity_provider: projects/843741030650/locations/global/workloadIdentityPools/git-repo-demo/providers/git-repo-demo
+          service_account: git-repo-demo@python-tuf-kms.iam.gserviceaccount.com
+
       - name: Snapshot
         uses: jku/repository-playground/playground/actions/snapshot@git-repo-snapshot
