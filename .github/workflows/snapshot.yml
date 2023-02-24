@@ -16,4 +16,4 @@ jobs:
 
     steps:
       - name: Snapshot
-        uses: jku/repository-playground/playground/actions/snapshot@main
+        uses: jku/repository-playground/playground/actions/snapshot@git-repo-snapshot
