@@ -30,5 +30,6 @@ jobs:
     permissions:
       contents: 'write' # for committing to signing event branch
 
+    steps:
       - name: Create signing events for offline version bumps
         uses: jku/repository-playground/playground/actions/offline-version-bump@bump-expiring
