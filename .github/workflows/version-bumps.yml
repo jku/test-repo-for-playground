@@ -1,0 +1,34 @@
+name: Version bumps
+
+on:
+  schedule:
+    - cron:  '17 1,7,13,19 * * *'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  online-version-bump:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: 'write' # for OIDC auth for GCP authentication
+      contents: 'write' # for committing to main
+
+    steps:
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@ef5d53e30bbcd8d0836f4288f5e50ff3e086997d
+        with:
+          token_format: access_token
+          workload_identity_provider: projects/843741030650/locations/global/workloadIdentityPools/git-repo-demo/providers/git-repo-demo
+          service_account: git-repo-demo@python-tuf-kms.iam.gserviceaccount.com
+
+      - name: Bump online versions
+        uses: jku/repository-playground/playground/actions/online-version-bump@bump-expiring
+
+  offline-version-bump:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'write' # for committing to signing event branch
+
+      - name: Create signing events for offline version bumps
+        uses: jku/repository-playground/playground/actions/offline-version-bump@bump-expiring
