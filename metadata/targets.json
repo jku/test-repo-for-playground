@@ -2,12 +2,37 @@
  "signatures": [
   {
    "keyid": "da63eeba4841366b8968e2842cd5768933101593c0a59267a156ad6faf7af635",
-   "sig": "3045022100cc6cfe966f972261dfcfa103352683f94a4cf0b628a77b283fc6ba76a5c3d28202206becaeb928b56be12cf74800348f35a430db4e50fe8c99f13258da35493295d6"
+   "sig": "3045022027dd0dc50574ef726c8c9f56d6f1d5d25bf7c7a3b735b9f3be6e074a02c10187022100f499cbf815930b5c75260842bd3d2ce18aba5303f43eb2cd701312813aadbe61"
   }
  ],
  "signed": {
   "_type": "targets",
-  "expires": "2024-02-26T10:04:37Z",
+  "delegations": {
+   "keys": {
+    "da63eeba4841366b8968e2842cd5768933101593c0a59267a156ad6faf7af635": {
+     "keytype": "ecdsa",
+     "keyval": {
+      "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEohqIdE+yTl4OxpX8ZxNUPrg3SL9H\nBDnhZuceKkxy2oMhUOxhWweZeG3bfM1T4ZLnJimC6CAYVU5+F5jZCoftRw==\n-----END PUBLIC KEY-----\n"
+     },
+     "scheme": "ecdsa-sha2-nistp256",
+     "x-playground-keyowner": "@jku"
+    }
+   },
+   "roles": [
+    {
+     "keyids": [
+      "da63eeba4841366b8968e2842cd5768933101593c0a59267a156ad6faf7af635"
+     ],
+     "name": "delegated",
+     "paths": [
+      "delegated/*"
+     ],
+     "terminating": true,
+     "threshold": 1
+    }
+   ]
+  },
+  "expires": "2024-02-29T13:06:50Z",
   "spec_version": "1.0.31",
   "targets": {
    "hello": {
@@ -17,7 +42,7 @@
     "length": 3
    }
   },
-  "version": 3,
+  "version": 4,
   "x-playground-expiry-period": 364,
   "x-playground-signing-period": 60
  }
