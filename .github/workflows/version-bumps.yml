@@ -33,4 +33,4 @@ jobs:
 
     steps:
       - name: Create signing events for offline version bumps
-        uses: jku/repository-playground/playground/actions/offline-version-bump@dispatch-signing-events
+        uses: jku/repository-playground/playground/actions/offline-version-bump@main
