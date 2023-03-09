@@ -23,7 +23,7 @@ jobs:
           service_account: git-repo-demo@python-tuf-kms.iam.gserviceaccount.com
 
       - name: Bump online versions
-        uses: jku/repository-playground/playground/actions/online-version-bump@main
+        uses: jku/repository-playground/playground/actions/online-version-bump@refactor-git
 
   offline-version-bump:
     runs-on: ubuntu-latest
@@ -33,4 +33,4 @@ jobs:
 
     steps:
       - name: Create signing events for offline version bumps
-        uses: jku/repository-playground/playground/actions/offline-version-bump@main
+        uses: jku/repository-playground/playground/actions/offline-version-bump@refactor-git
