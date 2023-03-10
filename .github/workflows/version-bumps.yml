@@ -30,7 +30,13 @@ jobs:
     permissions:
       contents: 'write' # for committing to signing event branch
       actions: 'write' # for dispatching signing event workflow
-    steps:
+    steps:    
+      - name: Debug
+        run: |
+          echo "show-ref"
+          git show-ref
+          echo "ls-remote"
+          git ls-remote
       - name: Create signing events for offline version bumps
         uses: jku/repository-playground/playground/actions/offline-version-bump@main
 
