@@ -23,7 +23,7 @@ jobs:
           workload_identity_provider: projects/843741030650/locations/global/workloadIdentityPools/git-repo-demo/providers/git-repo-demo
           service_account: git-repo-demo@python-tuf-kms.iam.gserviceaccount.com
       - id: online-bump
-        uses: jku/repository-playground/playground/actions/online-version-bump@refactor-snapshot
+        uses: jku/repository-playground/playground/actions/online-version-bump@main
 
   offline-version-bump:
     runs-on: ubuntu-latest
