@@ -2,17 +2,17 @@
  "signatures": [
   {
    "keyid": "da63eeba4841366b8968e2842cd5768933101593c0a59267a156ad6faf7af635",
-   "sig": "3045022067876d241df4ee0a02f9aeefbcf6731c085f77914955d414e24fdb22f9704a350221009dce4ae07b7118dccf604536597ab120e4b434f9c9e26dbcb1d3fcad047a7bcb"
+   "sig": "3046022100e515ddde970752b60a59b6471fb369bbe02a7ba6afd77f5f1b38b7d0d57fb568022100861087820242463ff632daef28ddf6ae8310a62470ebc9c2e8046dbfa949fcb2"
   },
   {
    "keyid": "8d5c4de5db483df83aa6923e63bd88ebfbb02b91eb6453073b7cf66191dcc5aa",
-   "sig": "30450221009c125def110f8aef65a455c5526ce122a64d4acf1d2648d0038a34a46895516602200ad0d53154192e59dac1ff44e1e5e54a9197b32790a9cfa7fdf44b3e58b1a880"
+   "sig": ""
   }
  ],
  "signed": {
   "_type": "root",
   "consistent_snapshot": true,
-  "expires": "2024-02-28T10:12:03Z",
+  "expires": "2024-03-14T09:10:18Z",
   "keys": {
    "8d5c4de5db483df83aa6923e63bd88ebfbb02b91eb6453073b7cf66191dcc5aa": {
     "keytype": "ecdsa",
@@ -22,13 +22,14 @@
     "scheme": "ecdsa-sha2-nistp256",
     "x-playground-keyowner": "@kommendorkapten"
    },
-   "d0eba06f4a93276b7011b63833d741e8c57e6cf81d2fa9e7480d4f815dbea1b0": {
-    "keytype": "ecdsa",
+   "abcd": {
+    "keytype": "sigstore-oidc",
     "keyval": {
-     "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEu+ebm3VUg6U2b0IIeR6NFZU7uxkL\nR1sVLxV8SEW7G+AMXMasEQf5daxfwVMP1kuEkhGs3mBYLkYXlWDh9BNSxg==\n-----END PUBLIC KEY-----\n"
+     "identity": "https://github.com/jku/test-repo-for-playground/.github/workflows/snapshot.yml@refs/heads/main",
+     "issuer": "https://token.actions.githubusercontent.com"
     },
-    "scheme": "ecdsa-sha2-nistp256",
-    "x-playground-online-uri": "gcpkms:projects/python-tuf-kms/locations/global/keyRings/git-repo-demo/cryptoKeys/online/cryptoKeyVersions/1"
+    "scheme": "Fulcio",
+    "x-playground-online-uri": "sigstore:"
    },
    "da63eeba4841366b8968e2842cd5768933101593c0a59267a156ad6faf7af635": {
     "keytype": "ecdsa",
@@ -37,6 +38,15 @@
     },
     "scheme": "ecdsa-sha2-nistp256",
     "x-playground-keyowner": "@jku"
+   },
+   "efgh": {
+    "keytype": "sigstore-oidc",
+    "keyval": {
+     "identity": "https://github.com/jku/test-repo-for-playground/.github/workflows/version-bumps.yml@refs/heads/main",
+     "issuer": "https://token.actions.githubusercontent.com"
+    },
+    "scheme": "Fulcio",
+    "x-playground-online-uri": "sigstore:"
    }
   },
   "roles": {
@@ -49,7 +59,8 @@
    },
    "snapshot": {
     "keyids": [
-     "d0eba06f4a93276b7011b63833d741e8c57e6cf81d2fa9e7480d4f815dbea1b0"
+     "abcd",
+     "efgh"
     ],
     "threshold": 1,
     "x-playground-expiry-period": 365
@@ -62,14 +73,15 @@
    },
    "timestamp": {
     "keyids": [
-     "d0eba06f4a93276b7011b63833d741e8c57e6cf81d2fa9e7480d4f815dbea1b0"
+     "abcd",
+     "efgh"
     ],
     "threshold": 1,
     "x-playground-expiry-period": 1
    }
   },
   "spec_version": "1.0.31",
-  "version": 2,
+  "version": 3,
   "x-playground-expiry-period": 365,
   "x-playground-signing-period": 60
  }
