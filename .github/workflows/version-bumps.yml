@@ -16,11 +16,8 @@ jobs:
     outputs:
       generated: ${{ steps.online-bump.outputs.generated }}
     steps:
-      - env:
-          ACCOUNT: ${{ vars.GCP_SERVICE_ACCOUNT }}
-        run: echo "account $ACCOUNT"
       - id: online-bump
-        uses: jku/repository-playground/playground/actions/online-version-bump@main
+        uses: jku/repository-playground/playground/actions/online-version-bump@debug-repo-vars
 
   offline-version-bump:
     runs-on: ubuntu-latest
