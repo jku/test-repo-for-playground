@@ -19,8 +19,8 @@ jobs:
       - id: online-bump
         uses: jku/repository-playground/playground/actions/online-version-bump@debug-repo-vars
         with:
-          gcp_workload_identity_provider: vars.GCP_WORKLOAD_IDENTITY_PROVIDER
-          gcp_service_account: vars.GCP_SERVICE_ACCOUNT
+          gcp_workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          gcp_service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
 
   offline-version-bump:
     runs-on: ubuntu-latest
