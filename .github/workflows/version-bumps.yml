@@ -27,6 +27,9 @@ jobs:
     steps:
       - name: Create signing events for offline version bumps
         uses: jku/repository-playground/playground/actions/offline-version-bump@main
+        with:
+          gcp_workload_identity_provider: vars.GCP_WORKLOAD_IDENTITY_PROVIDER
+          gcp_service_account: vars.GCP_SERVICE_ACCOUNT
 
   deploy:
     permissions:
