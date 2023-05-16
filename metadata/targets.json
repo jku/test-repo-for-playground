@@ -2,7 +2,7 @@
  "signatures": [
   {
    "keyid": "da63eeba4841366b8968e2842cd5768933101593c0a59267a156ad6faf7af635",
-   "sig": "304502207e9abb0b2c507d4f758a66666d5fc172d922d85125a301c0c4f49f4b502d6acb022100d7f068058f44d6946cec469e5b585e461bca58754f48dd5dc5fc732a55cfd671"
+   "sig": "304502203ae06c329ab0f5bf0b856326ff49cb7733b78f525aeecb57b47ab3ec9bd910f9022100c543fafd36832f077ca58d40f3ff6398cb17db7f1eec5c1607327c5e9c0c4986"
   }
  ],
  "signed": {
@@ -32,23 +32,35 @@
     }
    ]
   },
-  "expires": "2024-03-08T11:47:26Z",
+  "expires": "2024-05-14T12:14:33Z",
   "spec_version": "1.0.31",
   "targets": {
+   "README.md": {
+    "hashes": {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "length": 0
+   },
    "hello": {
     "hashes": {
-     "sha-256": "dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22"
+     "sha256": "dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22"
     },
     "length": 3
    },
+   "new-file": {
+    "hashes": {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "length": 0
+   },
    "newtarget": {
     "hashes": {
-     "sha-256": "40df1c0d8cc40d70301a2de47b3472540f9e4575c6509aece097e075e8261a19"
+     "sha256": "40df1c0d8cc40d70301a2de47b3472540f9e4575c6509aece097e075e8261a19"
     },
     "length": 28
    }
   },
-  "version": 6,
+  "version": 7,
   "x-playground-expiry-period": 364,
   "x-playground-signing-period": 60
  }
