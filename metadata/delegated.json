@@ -2,12 +2,12 @@
  "signatures": [
   {
    "keyid": "da63eeba4841366b8968e2842cd5768933101593c0a59267a156ad6faf7af635",
-   "sig": "3046022100dba351dc7efbac9cd3c3d9c484d024d401724f8087bcf8a6ef7fef47d9e0a1d2022100c3a037fedd6659535b1249a6921968fd6cc8ff7af971a08c677b82c95dddab35"
+   "sig": ""
   }
  ],
  "signed": {
   "_type": "targets",
-  "expires": "2023-06-21T07:12:36Z",
+  "expires": "2023-06-21T07:21:30Z",
   "spec_version": "1.0.31",
   "targets": {
    "delegated/addedfile": {
@@ -23,7 +23,7 @@
     "length": 2
    }
   },
-  "version": 10,
+  "version": 11,
   "x-playground-expiry-period": 29,
   "x-playground-signing-period": 29
  }
