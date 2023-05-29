@@ -13,7 +13,7 @@ jobs:
   handle-signing-event:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write # for commiting the snapshot/timestamp changes
       issues: write
       pull-requests: write
     steps:
