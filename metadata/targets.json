@@ -2,7 +2,7 @@
  "signatures": [
   {
    "keyid": "da63eeba4841366b8968e2842cd5768933101593c0a59267a156ad6faf7af635",
-   "sig": "3044022033c3307261a9ac2fb043c4dfd9f401eaace4c23d88ec229fbc7d2612ffe12b8002206ff4fbc0da824631d63ee946d6a10604e989d5d82228e2954dda2f26fe0ec991"
+   "sig": ""
   }
  ],
  "signed": {
@@ -15,7 +15,7 @@
       "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEohqIdE+yTl4OxpX8ZxNUPrg3SL9H\nBDnhZuceKkxy2oMhUOxhWweZeG3bfM1T4ZLnJimC6CAYVU5+F5jZCoftRw==\n-----END PUBLIC KEY-----\n"
      },
      "scheme": "ecdsa-sha2-nistp256",
-     "x-playground-keyowner": "@jku"
+     "x-tuf-on-ci-keyowner": "@jku"
     }
    },
    "roles": [
@@ -32,7 +32,7 @@
     }
    ]
   },
-  "expires": "2024-05-21T07:12:33Z",
+  "expires": "2024-10-02T06:55:10Z",
   "spec_version": "1.0.31",
   "targets": {
    "hello": {
@@ -42,8 +42,8 @@
     "length": 13
    }
   },
-  "version": 7,
-  "x-playground-expiry-period": 364,
-  "x-playground-signing-period": 60
+  "version": 8,
+  "x-tuf-on-ci-expiry-period": 364,
+  "x-tuf-on-ci-signing-period": 60
  }
 }
